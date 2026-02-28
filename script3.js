@@ -11,7 +11,7 @@ const emptyState = document.getElementById("empty-state");
 function switchTab(tab){
     //console.log(tab);
     const tabs = ["all", "interview" , "rejected"];
-
+    currentTab= tab;
     for(const t of tabs){
         const tabName = document.getElementById("tab-"+ t); 
         if( t === tab ){
@@ -46,12 +46,14 @@ function switchTab(tab){
             emptyState.classList.remove("hidden")
         }
     }
+    updateCount();
 }
 
 //counts
 const totalCount = document.getElementById('total-count');
 const interviewCount = document.getElementById('interview-count');
 const rejectedCount = document.getElementById('rejected-count');
+const availableCount = document.getElementById('available')
 
 
 
@@ -78,7 +80,7 @@ document.getElementById('allJobs-container').addEventListener('click',function(e
     }
     if(clickedElement.classList.contains("delete1")){
         parent.removeChild(card);
-        updateCount
+        updateCount()
     }
 
 } )
@@ -94,9 +96,14 @@ function updateCount(){
         rejected: rejectedContainer.children.length,
     }
 
-    totalCount.innerText= counts["all"];
-    interviewCount.innerText= counts["interview"];
-    rejectedCount.innerText= counts["rejected"];
+    totalCount.innerText= counts.all;
+    interviewCount.innerText= counts.interview;
+    rejectedCount.innerText= counts.rejected;
+    availableCount.innerText = counts[currentTab];
+
+    if(counts[currentTab] < 1){
+        emptyState.classList.remove("hidden")
+    }
 
 }
 
