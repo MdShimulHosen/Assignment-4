@@ -26,18 +26,18 @@
     <title>Job Tracker</title>
 </head>
 <body>
-    <header class="w-[1110px] h-[149px] mx-auto mt-[60px] ">
+    <header class="max-w-[1110px] w-full mx-auto mt-[60px] px-4">
         <h2 class="text-4xl font-bold 4-[32px] mb-[20px]">Job Application Tracker</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="w-[360px] h-[97px] bg-gray-100 shadow-sm rounded-[5px] flex flex-col justify-center p-[20px] ">
+            <div class="w-full md:w-[360px] h-[97px] bg-gray-100 shadow-sm rounded-[5px] flex flex-col justify-center p-[20px] ">
                 <p class="font-medium text-[14px]">Total</p>
                 <p id="total-count" class="font-bold text-2xl">0</p>
             </div>
-            <div class="w-[360px] h-[97px] bg-gray-100 rounded-[5px] flex flex-col justify-center p-[20px] ">
+            <div class="w-full md:w-[360px] h-[97px] bg-gray-100 rounded-[5px] flex flex-col justify-center p-[20px] ">
                 <p class="font-medium text-[14px]">Interview</p>
                 <p id="interview-count" class="font-bold text-2xl text-green-600">0</p>
             </div>
-            <div class="w-[360px] h-[97px] bg-gray-100  rounded-[5px] flex flex-col justify-center p-[20px]">
+            <div class="w-full md:w-[360px] h-[97px] bg-gray-100  rounded-[5px] flex flex-col justify-center p-[20px]">
                 <p class="font-medium text-[14px]">Rejected</p>
                 <p id="rejected-count" class="font-bold text-2xl text-red-800">0</p>
             </div>
@@ -45,10 +45,10 @@
     </header>
     <hr class="my-[30px] opacity-20">
 
-<main class="w-[1110px] h-[149px] mx-auto ]">
-        <div class="flex justify-between w-[1110px] mb-[24px]">
+<main class="max-w-[1110px] w-full mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:justify-between w-full mb-[24px] gap-2">
             <p class="text-[20px] font-semibold">Available Jobs</p>
-            <p id="available">8 jobs</p>
+            <p><span id="available">8</span> jobs </p>
         </div>
         <div class="flex gap-3 mb-[16px]">
             <button onclick="switchTab('all')" id="tab-all" class= " px-5 py-1.5 rounded-full border-2 text-sm font-medium cursor-pointer transition-all duration-200">All Jobs</button>
@@ -59,7 +59,7 @@
 
         <div id="allJobs-container" >
             <section id="job-container" class="hidden">
-                <div class="w-[1110px] h-[280px] p-[24px] bg-gray-100 rounded-[5px] mb-[8px] card ">
+                <div class="w-full h-auto p-[24px] bg-gray-100 rounded-[5px] mb-[8px] card ">
                     <div class="flex justify-between">
                         <h3 class="text-[20px] font-semibold mb-[2px]">Mobile First Corp 2</h3>
                         <button class="btn rounded-full w-[32px] h-[32px] opacity-50 delete1 "><i class="delete1  fa-regular fa-trash-can"></i></button>
@@ -73,7 +73,7 @@
                         <button class="btn border-[2px] font-semibold text-[14px] border-red-800 text-red-800 px-[12px] py-[8px] w-[97px] h-[36px] rejected">REJECTED</button>
                     </div>
                 </div>
-                <div class="w-[1110px] h-[280px] p-[24px] bg-gray-100 rounded-[5px] mb-[8px] card">
+                <div class="w-full h-auto p-[24px] bg-gray-100 rounded-[5px] mb-[8px] card">
                     <div class="flex justify-between">
                         <h3 class="text-[20px] font-semibold mb-[2px]">WebFlow Agency</h3>
                         <button class="btn rounded-full w-[32px] h-[32px] opacity-50 delete1 "><i class=" fa-regular fa-trash-can pointer-events-none"></i></button>
@@ -87,7 +87,7 @@
                         <button class="btn border-[2px] font-semibold text-[14px] border-red-800 text-red-800 px-[12px] py-[8px] w-[97px] h-[36px] rejected">REJECTED</button>
                     </div>
                 </div>
-                                    <div class="w-[1110px] h-[280px] p-[24px] bg-gray-100 rounded-[5px] mb-[8px] card">
+                    <div class="w-full h-auto p-[24px] bg-gray-100 rounded-[5px] mb-[8px] card">
                     <div class="flex justify-between">
                         <h3 class="text-[20px] font-semibold mb-[2px]">DataViz Solutions</h3>
                         <button class="btn rounded-full w-[32px] h-[32px] opacity-50 delete1 "><i class=" fa-regular fa-trash-can pointer-events-none"></i></button>
@@ -101,7 +101,7 @@
                         <button class="btn border-[2px] font-semibold text-[14px] border-red-800 text-red-800 px-[12px] py-[8px] w-[97px] h-[36px] rejected">REJECTED</button>
                     </div>
                 </div>
-                                    <div class="w-[1110px] h-[280px] p-[24px] bg-gray-100 rounded-[5px] mb-[8px] card">
+                    <div class="w-full h-auto p-[24px] bg-gray-100 rounded-[5px] mb-[8px] card">
                     <div class="flex justify-between">
                         <h3 class="text-[20px] font-semibold mb-[2px]">CloudFirst Inc</h3>
                         <button class="btn rounded-full w-[32px] h-[32px] opacity-50 delete1 "><i class=" fa-regular fa-trash-can pointer-events-none"></i></button>
@@ -115,7 +115,7 @@
                         <button class="btn border-[2px] font-semibold text-[14px] border-red-800 text-red-800 px-[12px] py-[8px] w-[97px] h-[36px] rejected">REJECTED</button>
                     </div>
                 </div>
-                                    <div class="w-[1110px] h-[280px] p-[24px] bg-gray-100 rounded-[5px] mb-[8px] card">
+                    <div class="w-full h-auto p-[24px] bg-gray-100 rounded-[5px] mb-[8px] card">
                     <div class="flex justify-between">
                         <h3 class="text-[20px] font-semibold mb-[2px]">Innovation Labs</h3>
                         <button class="btn rounded-full w-[32px] h-[32px] opacity-50 delete1 "><i class=" fa-regular fa-trash-can pointer-events-none"></i></button>
@@ -129,7 +129,7 @@
                         <button class="btn border-[2px] font-semibold text-[14px] border-red-800 text-red-800 px-[12px] py-[8px] w-[97px] h-[36px] rejected">REJECTED</button>
                     </div>
                 </div>
-                    <div class="w-[1110px] h-[280px] p-[24px] bg-gray-100 rounded-[5px] mb-[8px] h-auto card">
+                    <div class="w-full h-auto p-[24px] bg-gray-100 rounded-[5px] mb-[8px] h-auto card">
                     <div class="flex justify-between">
                         <h3 class="text-[20px] font-semibold mb-[2px]">MegaCorp Solutions</h3>
                         <button class="btn rounded-full w-[32px] h-[32px] opacity-50 delete1 "><i class=" fa-regular fa-trash-can pointer-events-none"></i></button>
@@ -143,7 +143,7 @@
                         <button class="btn border-[2px] font-semibold text-[14px] border-red-800 text-red-800 px-[12px] py-[8px] w-[97px] h-[36px] rejected">REJECTED</button>
                     </div>
                 </div>
-                <div class="w-[1110px] h-[280px] p-[24px] bg-gray-100 rounded-[5px] mb-[8px] card">
+                <div class="w-full h-auto p-[24px] bg-gray-100 rounded-[5px] mb-[8px] card">
                     <div class="flex justify-between">
                         <h3 class="text-[20px] font-semibold mb-[2px]">StartupXYZ</h3>
                         <button class="btn rounded-full w-[32px] h-[32px] opacity-50 delete1 "><i class=" fa-regular fa-trash-can pointer-events-none"></i></button>
@@ -157,7 +157,7 @@
                         <button class="btn border-[2px] font-semibold text-[14px] border-red-800 text-red-800 px-[12px] py-[8px] w-[97px] h-[36px] rejected">REJECTED</button>
                     </div>
                 </div>
-                    <div class="w-[1110px] h-[280px] p-[24px] bg-gray-100 rounded-[5px] mb-[8px] h-auto card">
+                    <div class="w-full h-auto p-[24px] bg-gray-100 rounded-[5px] mb-[8px] h-auto card">
                     <div class="flex justify-between">
                         <h3 class="text-[20px] font-semibold mb-[2px]">TechCorp Industries</h3>
                         <button class="btn rounded-full w-[32px] h-[32px] opacity-50 delete1 "><i class=" fa-regular fa-trash-can pointer-events-none"></i></button>
